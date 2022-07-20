@@ -10,6 +10,8 @@ public class PlayerRestart : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+        GameManager.instance.PlayerDead();
         transform.position = StartPos.position;
       
     }
