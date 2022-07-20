@@ -11,5 +11,6 @@ public class PlayerRestart : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         transform.position = StartPos.position;
+      
     }
 }
