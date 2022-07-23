@@ -79,7 +79,12 @@ public class GameManager : MonoBehaviour
     public void PlayerDead()
     {
         totalDeaths++;
-        deathText.text = "Deaths: " + totalDeaths;
+        timer = 0;
+        System.TimeSpan t = System.TimeSpan.FromSeconds(timer);
+        timerFormatted = string.Format("{0:D2}:{1:D2}:{2:D2}", t.Minutes, t.Seconds, t.Milliseconds);
+        timeText.text = timerFormatted;
+        deathText.text = "Attempt: " + totalDeaths;
+        playerStarted = false;
     }
 
     public void PlayerReachedFinish()
@@ -87,7 +92,7 @@ public class GameManager : MonoBehaviour
         gameScene.SetActive(false);
         endScene.SetActive(true);
         endTimeText.text = "TOTAL TIME: " + timerFormatted;
-        endDeathText.text = "NUMBER OF DEATHS: " + totalDeaths;
+        endDeathText.text = "NUMBER OF ATTEMPTS: " + totalDeaths;
 
 
 

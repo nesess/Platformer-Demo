@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
-    
+    [SerializeField]
+    private float stopPos;
     
 
     [SerializeField]
@@ -16,7 +17,7 @@ public class CloudMovement : MonoBehaviour
     {
 
         transform.Translate(Vector3.right * Time.deltaTime*moveSpeed);
-        if (transform.position.x >117)
+        if (transform.position.x > stopPos)
             {
                 transform.position = new Vector3(-113,transform.position.y,transform.position.z);
             }
