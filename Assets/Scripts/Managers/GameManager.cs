@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private float timer =0;
     private string timerFormatted;
 
-    private int totalDeaths = 0;
+    private int totalDeaths = -1;
     private bool playerStarted = false;
 
     public static GameManager instance;
