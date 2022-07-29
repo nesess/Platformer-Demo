@@ -8,9 +8,10 @@ public class GameEndTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponentInParent<PlayerController>().enabled = false;
+      
+        collision.GetComponent<PlayerController>().enabled = false;
         GameManager.instance.PlayerReachedFinish();
-        collision.GetComponentInParent<PlayerRestart>().enabled = false;
+        collision.GetComponentInChildren<PlayerRestart>().enabled = false;
         Time.timeScale = 0;
         
     }

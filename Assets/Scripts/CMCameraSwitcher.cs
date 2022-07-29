@@ -16,7 +16,7 @@ public class CMCameraSwitcher : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         myAnim.Play("DropAreaVCam");
-        Debug.Log("oldu");
+      
     }
 
     private void OnTriggerExit2D(Collider2D collision)

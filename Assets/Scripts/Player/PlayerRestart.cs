@@ -16,7 +16,7 @@ public class PlayerRestart : MonoBehaviour
     private void Dead()
     {
         GameManager.instance.PlayerDead();
-        transform.position = StartPos.position;
+        transform.parent.position = StartPos.position;
     }
 
     private void Update()

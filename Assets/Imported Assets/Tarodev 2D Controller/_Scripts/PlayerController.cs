@@ -297,5 +297,14 @@ namespace TarodevController {
         }
 
         #endregion
+
+        public void AddVerticalForce(float forceAmount)
+        {
+            _currentVerticalSpeed = forceAmount;
+            _endedJumpEarly = false;
+            _coyoteUsable = false;
+            _timeLeftGrounded = float.MinValue;
+            JumpingThisFrame = true;
+        }
     }
 }
