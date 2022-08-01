@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class CMCameraSwitcher : MonoBehaviour
 {
- 
 
+    [SerializeField]
+    private int camNumber = 1;
+
+    [SerializeField]
     private Animator myAnim;
 
-    private void Awake()
-    {
-        myAnim = GetComponent<Animator>();
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        myAnim.Play("DropAreaVCam");
+        if(camNumber==1)
+        {
+            myAnim.Play("DropAreaVCam");
+        }
+        else if(camNumber==2)
+        {
+            myAnim.Play("DropAreaVCam2");
+            
+        }
+        
       
     }
 

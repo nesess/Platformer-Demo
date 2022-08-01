@@ -15,6 +15,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void SwitchLevel3()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void SwitchMainMenu()
     {
         SceneManager.LoadScene(0);
