@@ -5,3 +5,5 @@
 This a demo platformer game I made for my internship.
 
 You can play from this link: https://neses.itch.io/2d-platformer-demo
+
+Level 2 gameplay video: https://youtu.be/LIc6OXIjxfI
